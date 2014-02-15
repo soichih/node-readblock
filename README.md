@@ -16,8 +16,7 @@ file.read("\n>", function(fasta) {
 ```
 
 readblock doesn't stream/flow like many other similar modules. It reads one block at a time (although buffered to about 8k), 
-asynchrnously, so you can use it as part of async.whilst. In theory, readblock should be able to read files with any
-size, and really fast.
+asynchrnously, so you can use it as part of async.whilst. In theory, readblock should be able to read a really large files.
 
 readblock was designed to load a large fasta input files delimited by "\n>", for example..
 
