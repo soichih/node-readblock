@@ -1,6 +1,6 @@
 readblock
 ============
-Read big files, block by block
+nodejs module to read a big file block by block, with given delimiter, really fast
 
 ```
 npm install readblock
