@@ -1,15 +1,12 @@
 readblock
 ============
-nodejs module to read a big file block by block, with given delimiter, really fast
+nodejs module to read a big file block by block, with a given delimiter, really fast
 
 ```
 npm install readblock
 ```
 
 ##Usage
-This modules can read a large file block by block, really fast, and by specified delimiter asynchronously.
-
-For example...
 ```
 var readblock = require('../index');
 var file = readblock.open('test.fasta');
@@ -21,6 +18,8 @@ file.read("\n>", function(fasta) {
 readblock doesn't stream/flow like many other similar modules. It reads one block at a time (although buffered to about 8k), 
 asynchrnously, so you can use it as part of async.whilst. In theory, readblock should be able to read files with any
 size, and really fast.
+
+readblock was designed to load a large fasta input files delimited by "\n>", for example..
 
 ```
 var async = require('async');
@@ -67,3 +66,4 @@ AAGAGTTTTGCAAGCACCGTGGAAGGAGGGTGATAGAGAGA
 ...
 ```
 
+You can use this to load other large files one block at a time.
