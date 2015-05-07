@@ -1,6 +1,6 @@
 {
   "name": "readblock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "nodejs module to read a big file block by block, with given delimiter, really fast",
   "main": "index.js",
   "scripts": {
